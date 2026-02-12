@@ -1,6 +1,6 @@
 site_name: Prof. Nyalala's Teaching Hub
-site_url: https://[your-username].github.io/[repo-name]/
-repo_url: https://github.com/[your-username]/[repo-name]
+site_url: https://inyalala.github.io/data-science-teaching-hub/
+repo_url: https://github.com/inyalala/data-science-teaching-hub
 
 theme:
   name: material
@@ -11,16 +11,9 @@ theme:
     - navigation.tabs
     - navigation.sections
     - content.code.copy
-    - search.highlight
 
 nav:
   - Home: index.md
-  - 'DBMS (UG)':
-    - 'Syllabus': dbms-ug/syllabus.md
-    - 'Lecture 1: Intro to SQL': dbms-ug/lecture1.md
-  - 'Big Data (MTech)':
-    - 'Setup Guide': bigdata-mtech/setup.md
-    - 'Lab 1: Spark': bigdata-mtech/lab1.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
