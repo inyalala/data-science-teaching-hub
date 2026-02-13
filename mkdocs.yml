@@ -1,20 +1,61 @@
-site_name: Prof. Nyalala's Teaching Hub
+site_name: Dr. Nyalala | Data Science & AI Hub
 site_url: https://inyalala.github.io/data-science-teaching-hub/
 repo_url: https://github.com/inyalala/data-science-teaching-hub
 
 theme:
   name: material
-  palette:
-    primary: indigo
-    accent: light blue
+  logo: assets/logo.png # We can add this later
+  favicon: assets/favicon.ico
   features:
-    - navigation.tabs
-    - navigation.sections
-    - content.code.copy
+    - navigation.tabs          # Top-level menu (UX upgrade)
+    - navigation.tabs.sticky
+    - navigation.sections      # Sidebar grouping
+    - navigation.expand        # Keep menus open
+    - navigation.top           # "Back to top" button
+    - navigation.tracking      # Highlights menu as you scroll
+    - content.code.copy        # Essential for labs
+    - content.code.annotate    # Pro code explanations
+    - search.suggest
+    - search.highlight
 
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal            # Academic Teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+# Proper Professional Navigation Structure
 nav:
-  - Home: index.md
+  - Welcome: index.md
+  - 📘 DBMS (Undergraduate):
+    - Overview: dbms-ug/index.md
+    - Lectures: dbms-ug/lectures.md
+    - Labs: dbms-ug/labs.md
+    - Resources: dbms-ug/resources.md
+  - 🚀 Big Data (MTech):
+    - Overview: bigdata-mtech/index.md
+    - Tutorials: bigdata-mtech/tutorials.md
+    - Labs: bigdata-mtech/labs.md
+  - 🏛️ About:
+    - Office Hours: about/contact.md
+    - Teaching Philosophy: about/philosophy.md
 
 markdown_extensions:
-  - pymdownx.arithmatex:
-      generic: true
+  - admonition            # Pro "Note" and "Warning" boxes
+  - pymdownx.details      # Collapsible sections
+  - pymdownx.superfences  # Better code blocks
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
